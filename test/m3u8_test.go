@@ -1,8 +1,8 @@
 package test
 
 import (
+	"github.com/dollarkillerx/stream-media-tools/m3u8"
 	"log"
-	"stream-media-tools/m3u8"
 	"testing"
 )
 

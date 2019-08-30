@@ -10,3 +10,7 @@
 	}
 ```
 
+### ts 转 mp4
+``` 
+err := transcoding.TsToMp4("./dow/main.ts", "./out/1.mp4")
+```

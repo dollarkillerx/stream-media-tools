@@ -7,7 +7,7 @@ import (
 	"io/ioutil"
 	"net/url"
 
-	"stream-media-tools/m3u8/tool"
+	"github.com/dollarkillerx/stream-media-tools/m3u8/tool"
 )
 
 type Result struct {

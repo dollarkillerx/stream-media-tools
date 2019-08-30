@@ -2,7 +2,7 @@ package m3u8
 
 import (
 	"github.com/dollarkillerx/easyutils/clog"
-	"stream-media-tools/m3u8/dl"
+	"github.com/dollarkillerx/stream-media-tools/m3u8/dl"
 )
 
 func M3U8Download(output, url string) error {

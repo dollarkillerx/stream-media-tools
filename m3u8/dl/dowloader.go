@@ -10,8 +10,8 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"stream-media-tools/m3u8/parse"
-	"stream-media-tools/m3u8/tool"
+	"github.com/dollarkillerx/stream-media-tools/m3u8/parse"
+	"github.com/dollarkillerx/stream-media-tools/m3u8/tool"
 )
 
 const (
