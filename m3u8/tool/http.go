@@ -20,7 +20,7 @@ func Get(url string) (io.ReadCloser, error) {
 
 	sy.Lock()
 	if one == 0 {
-		response, e := st.ReptileUserRequestFrom("https://www.crunchyroll.com/military/episode-12-military-668525", nil, nil)
+		response, e := st.ReptileUserRequestFrom("https://www.crunchyroll.com/", nil, nil)
 		if e != nil {
 			panic(e.Error())
 		}
@@ -28,9 +28,10 @@ func Get(url string) (io.ReadCloser, error) {
 		cookies = response.Cookies()
 		one += 1
 	}
+	sy.Unlock()
 
 	resp, e := st.ReptileUserRequestFrom(url, nil, cookies)
-	sy.Unlock()
+
 
 	if e != nil {
 		panic(e.Error())
