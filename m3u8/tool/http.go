@@ -5,6 +5,7 @@ import (
 	"github.com/dollarkillerx/easyutils"
 	"io"
 	"net/http"
+	"sync"
 )
 
 var cookies []*http.Cookie
@@ -15,7 +16,9 @@ func Get(url string) (io.ReadCloser, error) {
 	if e != nil {
 		panic(e.Error())
 	}
+	sy := sync.RWMutex{}
 
+	sy.Lock()
 	if one == 0 {
 		response, e := st.ReptileUserRequestFrom("https://www.crunchyroll.com/military/episode-12-military-668525", nil, nil)
 		if e != nil {
@@ -27,6 +30,8 @@ func Get(url string) (io.ReadCloser, error) {
 	}
 
 	resp, e := st.ReptileUserRequestFrom(url, nil, cookies)
+	sy.Unlock()
+
 	if e != nil {
 		panic(e.Error())
 	}
