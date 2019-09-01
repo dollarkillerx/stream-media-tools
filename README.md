@@ -15,7 +15,16 @@ go get github.com/dollarkillerx/stream-media-tools
 	}
 ```
 
-### ts 转 mp4
-``` 
-err := transcoding.TsToMp4("./dow/main.ts", "./out/1.mp4")
-```
+### 转码
+- ts 转 MP4
+    ``` 
+    err := transcoding.TsToMp4("./dow/main.ts", "./out/1.mp4")
+    ```
+- video 转 h264
+    ``` 
+    ToH264(file, out string) error
+    ```
+- mp4 转 m3u8
+    ``` 
+    ToM3u8(file, out string) error
+    ```
